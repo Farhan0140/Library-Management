@@ -1,0 +1,90 @@
+[
+  {
+    "model": "book.category",
+    "fields": {
+      "name": "Science Fiction",
+      "description": "Books based on futuristic concepts, space exploration, and advanced technology."
+    }
+  },
+  {
+    "model": "book.category",
+    "fields": {
+      "name": "History",
+      "description": "Books about historical events and figures."
+    }
+  },
+  {
+    "model": "book.author",
+    "fields": {
+      "name": "Isaac Asimov",
+      "biography": "Isaac Asimov was a prolific science fiction writer and professor of biochemistry."
+    }
+  },
+  {
+    "model": "book.author",
+    "fields": {
+      "name": "Yuval Noah Harari",
+      "biography": "Yuval Noah Harari is an Israeli historian and author of popular science books."
+    }
+  },
+  {
+    "model": "book.book",
+    "fields": {
+      "title": "Foundation",
+      "author": 1,
+      "isbn": "9780553293357",
+      "category": 1,
+      "availability_status": true,
+      "published_date": "1951-06-01"
+    }
+  },
+  {
+    "model": "book.book",
+    "fields": {
+      "title": "Sapiens: A Brief History of Humankind",
+      "author": 2,
+      "isbn": "9780099590088",
+      "category": 2,
+      "availability_status": true,
+      "published_date": "2011-01-01"
+    }
+  },
+  {
+    "model": "users.member",
+    "fields": {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "membership_date": "2023-05-10",
+      "phone_number": "1234567890"
+    }
+  },
+  {
+    "model": "users.member",
+    "fields": {
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "membership_date": "2024-02-15",
+      "phone_number": "0987654321"
+    }
+  },
+  {
+    "model": "book.borrowrecord",
+    "fields": {
+      "book": 1,
+      "member": 1,
+      "borrow_date": "2025-08-01",
+      "return_date": null,
+      "returned": false
+    }
+  },
+  {
+    "model": "book.borrowrecord",
+    "fields": {
+      "book": 2,
+      "member": 2,
+      "borrow_date": "2025-07-20",
+      "return_date": "2025-08-05",
+      "returned": true
+    }
+  }
+]

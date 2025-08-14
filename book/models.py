@@ -1,5 +1,5 @@
 from django.db import models
-from users.models import User
+from users.models import Member
 
 
 class Category( models.Model ):
@@ -21,7 +21,7 @@ class Author( models.Model ):
 class Book( models.Model ):
     title = models.CharField(max_length=250)
     availability_status = models.BooleanField(default=True)
-    publish_date = models.DateField(blank=True, null=True)
+    published_date = models.DateField(blank=True, null=True)
     isbn = models.CharField(max_length=13, unique=True)
 
     author = models.ForeignKey(
@@ -48,7 +48,7 @@ class BorrowRecord( models.Model ):
     )
 
     member = models.ForeignKey(
-        User,
+        Member,
         on_delete=models.CASCADE,
         related_name='borrow_records',
     )
