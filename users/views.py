@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet
 from .models import Member
-from .serializer import Member_Serializer
+from .serializers import Member_Serializer
 
 
 class Member_View_Set( ModelViewSet ):

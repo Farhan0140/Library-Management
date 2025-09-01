@@ -20,7 +20,13 @@ class Book_Serializer( serializers.ModelSerializer ):
         model = Book
         fields = ['id', 'title', 'category', 'category_name', 'author', 'author_name', 'availability_status']
     
-    
+
+
+class Update_Book_Serializer( serializers.ModelSerializer ):
+    class Meta:
+        model = Book
+        fields = ['availability_status']
+
 
 class BorrowRecord_Serializer( serializers.ModelSerializer ):
     class Meta:
